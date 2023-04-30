@@ -5,6 +5,8 @@ use App\Http\Controllers\AlunoDeletaController;
 use App\Http\Controllers\AlunoEditaController;
 use App\Http\Controllers\AlunoRegistrarController;
 use App\Http\Controllers\CursoConsultaController;
+use App\Http\Controllers\CursoDeletaController;
+use App\Http\Controllers\CursoEditaController;
 use App\Http\Controllers\CursoRegistrarController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +24,7 @@ Route::post('/alunos/{alunoId}', [AlunoEditaController::class, 'edita']);
 Route::post('/cursos', [CursoRegistrarController::class, 'adiciona']);
 
 Route::get('/cursos', [CursoConsultaController::class, 'consulta']);
+
+Route::delete('/cursos/{cursoId}', [CursoDeletaController::class, 'deleta']);
+
+Route::post('/cursos/{cursoId}', [CursoEditaController::class, 'edita']);
