@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/cursos', function () {
+    return view('cursos');
+});
+
+Route::get('/alunos', "View\AlunoController@index");
+
+Route::get('/inscricoes', function () {
+    return view('inscricoes');
 });

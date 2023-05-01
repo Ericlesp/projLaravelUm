@@ -13,4 +13,8 @@ class Aluno extends Model
         'idade',
     ];
 
+    public function cursos() {
+        return $this->belongsToMany(Curso::class, 'aluno_curso');
+    }
+
 }

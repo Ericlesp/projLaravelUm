@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdicionaAlunoController;
 use App\Http\Controllers\AlunoConsultaController;
 use App\Http\Controllers\AlunoDeletaController;
 use App\Http\Controllers\AlunoEditaController;
@@ -28,3 +29,5 @@ Route::get('/cursos', [CursoConsultaController::class, 'consulta']);
 Route::delete('/cursos/{cursoId}', [CursoDeletaController::class, 'deleta']);
 
 Route::post('/cursos/{cursoId}', [CursoEditaController::class, 'edita']);
+
+Route::post('/cursos/{curso}/alunos', [AdicionaAlunoController::class, 'adicionaAluno']);

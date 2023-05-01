@@ -12,4 +12,8 @@ class Curso extends Model
         'codigo',
         'valor'
     ];
+
+    public function alunos() {
+        return $this->belongsToMany(Aluno::class, 'aluno_curso');
+    }
 }
