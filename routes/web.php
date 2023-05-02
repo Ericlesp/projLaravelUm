@@ -18,9 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cursos', function () {
-    return view('cursos');
-});
+Route::get('/cursos', "View\CursoController@index");
 
 Route::get('/alunos', "View\AlunoController@index");
 

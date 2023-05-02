@@ -25,6 +25,6 @@ class CursoRegistrarController extends Controller
 
         $curso->save();
 
-        return response("", 200);
+        return response("", 204);
     }
 }

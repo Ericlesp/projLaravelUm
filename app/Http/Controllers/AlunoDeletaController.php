@@ -16,6 +16,6 @@ class AlunoDeletaController extends Controller
 
         $aluno->delete();
 
-        return response('Aluno deletado com sucesso.', 200);
+        return response('Aluno deletado com sucesso.', 204);
     }
 }

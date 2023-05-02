@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 
 //Route::post('/alunos', AlunoRegistrarController::class);
 
-Route::post('/alunos', [AlunoRegistrarController::class, 'store']);
+Route::post('/alunos', [AlunoRegistrarController::class, 'store'])->name("alunos.store");
 
 Route::get('/alunos', [AlunoConsultaController::class, 'consulta']);
 
-Route::delete('/alunos/{alunoId}', [AlunoDeletaController::class, 'deleta']);
+Route::delete('/alunos/{alunoId}', [AlunoDeletaController::class, 'deleta'])->name("alunos.deleta");
 
 Route::post('/alunos/{alunoId}', [AlunoEditaController::class, 'edita']);
 
-Route::post('/cursos', [CursoRegistrarController::class, 'adiciona']);
+Route::post('/cursos', [CursoRegistrarController::class, 'adiciona'])->name("cursos.store");
 
 Route::get('/cursos', [CursoConsultaController::class, 'consulta']);
 
-Route::delete('/cursos/{cursoId}', [CursoDeletaController::class, 'deleta']);
+Route::delete('/cursos/{cursoId}', [CursoDeletaController::class, 'deleta'])->name("cursos.deleta");
 
 Route::post('/cursos/{cursoId}', [CursoEditaController::class, 'edita']);
 
