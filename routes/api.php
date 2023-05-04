@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdicionaAlunoController;
+use App\Http\Controllers\AdicionarAlunoController;
 use App\Http\Controllers\AlunoConsultaController;
 use App\Http\Controllers\AlunoDeletaController;
 use App\Http\Controllers\AlunoEditaController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\CursoConsultaController;
 use App\Http\Controllers\CursoDeletaController;
 use App\Http\Controllers\CursoEditaController;
 use App\Http\Controllers\CursoRegistrarController;
+use App\Http\Controllers\DeletaInscricaoAlunoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +32,6 @@ Route::delete('/cursos/{cursoId}', [CursoDeletaController::class, 'deleta'])->na
 
 Route::post('/cursos/{cursoId}', [CursoEditaController::class, 'edita']);
 
-Route::post('/cursos/{curso}/alunos', [AdicionaAlunoController::class, 'adicionaAluno']);
+Route::post('/cursos/inscricao/alunos', [AdicionarAlunoController::class, 'store'])->name("adiciona.aluno");
+
+Route::delete('/cursos/inscricao/alunos/{inscricaoId}', [DeletaInscricaoAlunoController::class, 'deleta'])->name("inscricao.deleta");

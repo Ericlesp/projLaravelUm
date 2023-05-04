@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdicionarAlunoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
@@ -21,6 +22,14 @@ Route::get('/', function () {
 Route::get('/cursos', "View\CursoController@index");
 
 Route::get('/alunos', "View\AlunoController@index");
+
+Route::get('/adiciona-aluno', "AdicionaAlunoController@adicionaAluno");
+
+//Route::get('/inscricoes', 'View\InscricaoController@adicionarAluno')->name('cursos.adicionar-aluno');
+
+Route::get('/cursos/inscricao/alunos/adicionar', [AdicionarAlunoController::class, 'create'])->name('cursos.alunos.adicionar');
+
+Route::post('/cursos/inscricao/alunos/adicionar', [AdicionarAlunoController::class, 'store'])->name('cursos.alunos.store');
 
 Route::get('/inscricoes', function () {
     return view('inscricoes');

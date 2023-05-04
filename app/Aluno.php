@@ -11,6 +11,7 @@ class Aluno extends Model
         'sobrenome',
         'email',
         'idade',
+        'id',
     ];
 
     public function cursos() {
