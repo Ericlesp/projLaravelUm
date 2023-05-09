@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <footer>Desenvolvido por Ericles Pereira</footer>
+    <footer>Desenvolvido por Ericles Pereira!</footer>
 
 </body>
 </html>
