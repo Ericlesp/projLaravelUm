@@ -31,6 +31,10 @@ Route::get('/cursos/inscricao/alunos/adicionar', [AdicionarAlunoController::clas
 
 Route::post('/cursos/inscricao/alunos/adicionar', [AdicionarAlunoController::class, 'store'])->name('cursos.alunos.store');
 
-Route::get('/inscricoes', function () {
-    return view('inscricoes');
+// Route::get('/inscricoes', function () {
+//     return view('inscricoes');
+// });
+
+Route::fallback(function(){
+    echo 'Página não existe. <a href="'.route('site.index').'">Voltar ao inicio</a>';
 });
