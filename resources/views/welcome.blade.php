@@ -27,10 +27,8 @@
     </header>
 
     <div id="principal">
-        <div class="efeito">
-            <div class="container">
-                <h1>Bem-vindo(a) a minha página!</h1>
-            </div>
+        <div class="titulo">
+            <h1>Bem-vindo(a) a minha página!</h1>
         </div>
     </div>
 
